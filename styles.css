@@ -41,40 +41,39 @@ body[data-lang="en"] {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0) 100%);
-    backdrop-filter: blur(8px);
 }
 
 .futerno-link {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9);
     color: var(--primary);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.2s ease;
-    border-bottom: 2px solid transparent;
     letter-spacing: 0.02em;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .futerno-link:hover {
+    background: rgba(255, 255, 255, 1);
     color: var(--secondary);
-    border-bottom-color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 /* Language Switcher */
 .lang-switcher {
     display: flex;
     gap: 0.25rem;
-    background: transparent;
 }
 
 .lang-btn {
-    padding: 0.4rem 0.75rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.9);
     color: var(--gray);
     font-size: 0.8rem;
     font-weight: 500;
@@ -86,11 +85,11 @@ body[data-lang="en"] {
 }
 
 .lang-btn:first-child {
-    border-radius: 2px 0 0 2px;
+    border-radius: 4px 0 0 4px;
 }
 
 .lang-btn:last-child {
-    border-radius: 0 2px 2px 0;
+    border-radius: 0 4px 4px 0;
 }
 
 .lang-btn .flag {
@@ -104,7 +103,7 @@ body[data-lang="en"] {
 }
 
 .lang-btn:hover:not(.active) {
-    background: var(--light-gray);
+    background: rgba(255, 255, 255, 1);
 }
 
 /* Hero Carousel */
