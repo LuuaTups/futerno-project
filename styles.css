@@ -92,8 +92,10 @@ body[data-lang="en"] {
     border-radius: 0 4px 4px 0;
 }
 
-.lang-btn .flag {
-    font-size: 1rem;
+.lang-btn .flag-icon {
+    width: 1.4rem;
+    height: 1rem;
+    border-radius: 2px;
 }
 
 .lang-btn.active {
@@ -595,8 +597,8 @@ body[data-lang="en"] {
 /* Video Showcase */
 .video-showcase {
     padding: 2rem 5%;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--bg);
+    color: var(--primary);
     text-align: center;
 }
 
@@ -615,13 +617,13 @@ body[data-lang="en"] {
 .video-content > p {
     font-size: 0.9rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--gray);
 }
 
 .video-embed {
     aspect-ratio: 16/9;
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid var(--accent);
+    background: var(--white);
+    border: 2px solid var(--light-gray);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -631,7 +633,7 @@ body[data-lang="en"] {
 }
 
 .video-embed:hover {
-    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
     transform: scale(1.02);
 }
 
@@ -640,12 +642,20 @@ body[data-lang="en"] {
     transition: transform 0.3s ease;
 }
 
+.play-button svg circle {
+    stroke: var(--secondary);
+}
+
+.play-button svg path {
+    fill: var(--secondary);
+}
+
 .video-embed:hover .play-button {
     transform: scale(1.1);
 }
 
 .video-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--gray);
     font-size: 0.9rem;
     letter-spacing: 0.1em;
 }
@@ -858,8 +868,8 @@ cite {
 /* Contact CTA */
 .contact-cta {
     padding: 2rem 5%;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary);
     text-align: center;
 }
 
@@ -878,7 +888,7 @@ cite {
 .cta-wrapper > p {
     font-size: 0.9rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -894,25 +904,27 @@ cite {
 
 .contact-card {
     padding: 1.5rem 1.25rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg);
+    border: 1px solid var(--light-gray);
     transition: all 0.3s ease;
     text-align: left;
 }
 
 .contact-card:hover {
-    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
 }
 
 .contact-card h4 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .card-role {
     font-size: 0.9rem;
-    color: var(--accent);
+    color: var(--secondary);
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -920,7 +932,7 @@ cite {
 
 .contact-card a {
     display: block;
-    color: var(--white);
+    color: var(--primary);
     text-decoration: none;
     font-size: 1.05rem;
     margin-bottom: 0.8rem;
@@ -934,10 +946,10 @@ cite {
 /* Footer */
 .site-footer {
     padding: 4rem 5%;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--bg);
+    color: var(--primary);
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--light-gray);
 }
 
 .footer-brand {
@@ -950,7 +962,7 @@ cite {
 
 .site-footer p {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--gray);
     letter-spacing: 0.05em;
 }
 
