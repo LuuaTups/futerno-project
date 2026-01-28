@@ -15,8 +15,12 @@ langBtns.forEach(btn => {
         document.body.setAttribute('data-lang', lang);
         localStorage.setItem('lang', lang);
 
-        langBtns.forEach(b => b.classList.remove('active'));
+        langBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
 
         updateContent();
     });
@@ -28,6 +32,28 @@ function updateContent() {
         const enText = el.getAttribute('data-en');
         el.innerHTML = currentLang === 'ko' ? koText : enText;
     });
+
+    // Update page title
+    const pageTitle = document.getElementById('pageTitle');
+    if (pageTitle) {
+        pageTitle.textContent = currentLang === 'ko'
+            ? 'Marmi Futerno | 석재 전문 제작사'
+            : 'Marmi Futerno | Specialist Stone Fabrication';
+    }
+
+    // Update meta description
+    const pageDescription = document.getElementById('pageDescription');
+    if (pageDescription) {
+        pageDescription.setAttribute('content', currentLang === 'ko'
+            ? '마르미 퓨테르노는 에스토니아 탈린에 본사를 둔 석재 전문 제작 회사입니다. 천연석, 엔지니어드 스톤으로 주거용, 상업용 맞춤형 석재 솔루션을 제공합니다.'
+            : 'Marmi Futerno is a specialist stone fabrication company based in Tallinn, Estonia. We provide custom stone solutions for residential and commercial projects using natural and engineered stone.');
+    }
+
+    // Update HTML lang attribute
+    const html = document.getElementById('html');
+    if (html) {
+        html.setAttribute('lang', currentLang === 'ko' ? 'ko' : 'en');
+    }
 }
 
 // Hero Carousel

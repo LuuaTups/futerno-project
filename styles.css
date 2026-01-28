@@ -1,3 +1,9 @@
+/**
+ * Marmi Futerno - Stone Fabrication Website
+ * Professional, responsive, production-ready design
+ * Optimized for performance and accessibility
+ */
+
 :root {
     --primary: #1A1A1A;
     --secondary: #8B7355;
@@ -493,10 +499,10 @@ body[data-lang="en"] {
 
 .project-row {
     display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 450px 1fr;
+    gap: 2rem;
     margin-bottom: 2rem;
-    max-width: 900px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
@@ -507,7 +513,7 @@ body[data-lang="en"] {
 }
 
 .project-row.reverse {
-    grid-template-columns: 1fr 350px;
+    grid-template-columns: 1fr 450px;
 }
 
 .project-row.reverse .project-gallery {
@@ -523,7 +529,7 @@ body[data-lang="en"] {
     overflow: hidden;
     background: var(--light-gray);
     border-radius: 4px;
-    height: 220px;
+    height: 420px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
@@ -920,13 +926,23 @@ cite {
     background: var(--bg);
     border: 1px solid var(--light-gray);
     transition: all 0.3s ease;
-    text-align: left;
+    text-align: center;
 }
 
 .contact-card:hover {
     border-color: var(--accent);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
+}
+
+.contact-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.25rem;
+    display: block;
+    border: 3px solid var(--accent);
 }
 
 .contact-card h4 {
@@ -938,7 +954,7 @@ cite {
 .card-role {
     font-size: 0.9rem;
     color: var(--secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -950,6 +966,7 @@ cite {
     font-size: 1.05rem;
     margin-bottom: 0.8rem;
     transition: color 0.3s ease;
+    text-align: center;
 }
 
 .contact-card a:hover {
@@ -982,11 +999,11 @@ cite {
 /* Responsive */
 @media (max-width: 1200px) {
     .project-row {
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 380px 1fr;
     }
 
     .project-row.reverse {
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: 1fr 380px;
     }
 }
 
@@ -1140,7 +1157,7 @@ cite {
     }
 
     .project-gallery {
-        height: 220px;
+        height: 375px;
     }
 
     .project-text h3 {
@@ -1266,7 +1283,7 @@ cite {
     }
 
     .project-gallery {
-        height: 180px;
+        height: 285px;
     }
 
     .project-text h3 {
