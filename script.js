@@ -60,7 +60,7 @@ function updateContent() {
 const slides = document.querySelectorAll('.carousel-slide');
 const dots = document.querySelectorAll('.carousel-dot');
 let currentSlide = 0;
-const slideInterval = 5000;
+const slideInterval = 3000;
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -91,14 +91,6 @@ dots.forEach((dot, index) => {
 });
 
 // Timeline scroll animations are handled by the general observer below
-
-// Video Embed Click
-const videoEmbed = document.getElementById('videoEmbed');
-if (videoEmbed) {
-    videoEmbed.addEventListener('click', () => {
-        alert('Factory video will be embedded here');
-    });
-}
 
 // Scroll Animations
 const observerOptions = {

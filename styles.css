@@ -133,7 +133,7 @@ body[data-lang="en"] {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-slide.active {
@@ -237,15 +237,169 @@ body[data-lang="en"] {
 
 /* Intro Statement */
 .intro-statement {
-    padding: 4rem 5%;
+    padding: 2.5rem 5%;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .statement-wrapper {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
     text-align: center;
+    background: rgba(250, 250, 248, 0.6);
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+/* Portfolio Section - Professional Layout */
+.editorial-section {
+    background: var(--white);
+    padding: 4rem 0 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Portfolio Header */
+.portfolio-header {
+    padding: 0 5% 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.portfolio-header::after {
+    content: '';
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.portfolio-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--primary);
+    margin-top: 0.5rem;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+/* Editorial Grid */
+.editorial-grid {
+    padding: 0 5% 4rem;
+}
+
+/* Info Panels - Different Styles */
+.info-panel {
+    padding: 3rem 2.5rem;
+    margin: 3rem 0;
+    border-radius: 12px;
+}
+
+.accent-panel {
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.08) 0%, rgba(139, 115, 85, 0.03) 100%);
+    border-left: 4px solid var(--accent);
+}
+
+.dark-panel {
+    background: linear-gradient(135deg, var(--secondary) 0%, rgba(43, 35, 25, 0.95) 100%);
+    color: var(--white);
+}
+
+.light-panel {
+    background: rgba(250, 250, 248, 0.95);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+}
+
+.panel-label {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.dark-panel .panel-label {
+    color: var(--accent);
+}
+
+.panel-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.dark-panel .panel-heading {
+    color: var(--white);
+}
+
+.panel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 2;
+    column-gap: 2.5rem;
+}
+
+.panel-list li {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--gray);
+    margin-bottom: 0.85rem;
+    padding-left: 1.2rem;
+    position: relative;
+    break-inside: avoid;
+}
+
+.panel-list li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.6rem;
+    top: 0.5em;
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.client-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.client-item p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.panel-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.panel-text:last-child {
+    margin-bottom: 0;
 }
 
 .statement-label {
@@ -255,23 +409,57 @@ body[data-lang="en"] {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .statement-heading {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.25;
     letter-spacing: -0.01em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--primary);
 }
 
 .statement-content p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.88rem;
+    line-height: 1.65;
     color: var(--gray);
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.statement-content p:last-child {
+    margin-bottom: 0;
+}
+
+.statement-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    text-align: left;
+}
+
+.statement-content ul li {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--gray);
+    margin-bottom: 0.7rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.statement-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+.statement-content ul li::before {
+    content: "▪";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* Featured Split */
@@ -379,9 +567,9 @@ body[data-lang="en"] {
 
 .section-heading {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.25;
     margin-bottom: 2rem;
 }
 
@@ -492,7 +680,7 @@ body[data-lang="en"] {
 
 .section-header {
     max-width: 900px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.75rem;
     padding: 0 2rem;
     text-align: center;
 }
@@ -613,6 +801,56 @@ body[data-lang="en"] {
     color: var(--gray);
 }
 
+/* Side-by-Side Layout (index3.html) */
+.sidebyside-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+    align-items: start;
+}
+
+.sidebyside-container.reverse .sidebyside-left {
+    order: 2;
+}
+
+.sidebyside-container.reverse .sidebyside-right {
+    order: 1;
+}
+
+.sidebyside-left,
+.sidebyside-right {
+    min-height: 100%;
+}
+
+.sidebyside-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    letter-spacing: -0.02em;
+}
+
+.sidebyside-left .project-gallery {
+    flex: 1;
+    min-height: 500px;
+}
+
+.sidebyside-right .info-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Video Showcase */
 .video-showcase {
     padding: 2rem 5%;
@@ -634,9 +872,31 @@ body[data-lang="en"] {
 }
 
 .video-content > p {
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
     color: var(--gray);
+}
+
+.video-wrapper-auto {
+    position: relative;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: var(--primary);
+}
+
+.video-wrapper-auto iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .video-embed {
@@ -905,10 +1165,11 @@ cite {
 }
 
 .cta-wrapper > p {
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
     color: var(--gray);
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1087,7 +1348,11 @@ cite {
     }
 
     .intro-statement {
-        padding: 3rem 5%;
+        padding: 2rem 5%;
+    }
+
+    .statement-wrapper {
+        padding: 1.5rem 1.75rem;
     }
 
     .services-timeline {
@@ -1146,6 +1411,27 @@ cite {
         gap: 1rem;
         padding: 0 5%;
         margin-bottom: 2.5rem;
+    }
+
+    .sidebyside-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 5%;
+        margin-bottom: 3rem;
+    }
+
+    .sidebyside-container.reverse .sidebyside-left,
+    .sidebyside-container.reverse .sidebyside-right {
+        order: 0;
+    }
+
+    .project-headline {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .sidebyside-left .project-gallery {
+        min-height: 350px;
     }
 
     .project-row.reverse .project-gallery {
@@ -1241,23 +1527,104 @@ cite {
     }
 
     .intro-statement {
-        padding: 2.5rem 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .statement-wrapper {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .editorial-section {
+        padding: 2.5rem 0 0;
+    }
+
+    .portfolio-header {
+        padding: 0 1rem 2.5rem;
+    }
+
+    .portfolio-header::after {
+        bottom: 1rem;
+        width: 50px;
+        height: 2px;
+    }
+
+    .portfolio-title {
+        font-size: 1.85rem;
+    }
+
+    .editorial-grid {
+        padding: 0 1rem 2rem;
+    }
+
+    .info-panel {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .panel-heading {
+        font-size: 1.3rem;
+    }
+
+    .panel-list {
+        column-count: 1;
+    }
+
+    .panel-list li {
+        font-size: 0.84rem;
+    }
+
+    .client-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .client-item h4 {
+        font-size: 0.9rem;
+    }
+
+    .client-item p {
+        font-size: 0.8rem;
+    }
+
+    .panel-text {
+        font-size: 0.86rem;
+    }
+
+    .sidebyside-container {
+        padding: 0 1rem;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .project-headline {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .sidebyside-left .project-gallery {
+        min-height: 300px;
     }
 
     .statement-label,
     .section-label {
         font-size: 0.6rem;
+        margin-bottom: 0.5rem;
     }
 
     .statement-heading,
     .section-heading {
-        font-size: clamp(1.25rem, 6vw, 1.75rem) !important;
-        margin-bottom: 1rem;
+        font-size: clamp(1.2rem, 6vw, 1.6rem) !important;
+        margin-bottom: 0.85rem;
     }
 
     .statement-content p {
-        font-size: 0.85rem;
-        line-height: 1.55;
+        font-size: 0.84rem;
+        line-height: 1.6;
+    }
+
+    .statement-content ul li {
+        font-size: 0.82rem;
+        margin-bottom: 0.6rem;
     }
 
     .services-timeline {
