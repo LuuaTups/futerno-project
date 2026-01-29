@@ -960,13 +960,26 @@ body[data-lang="en"] {
     flex-direction: column;
 }
 
+.project-header {
+    margin-bottom: 1.5rem;
+}
+
 .project-headline {
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     color: var(--primary);
     letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.project-subtext {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
 }
 
 .sidebyside-left .project-gallery {
@@ -1607,9 +1620,17 @@ cite {
         order: 0;
     }
 
+    .project-header {
+        margin-bottom: 1.25rem;
+    }
+
     .project-headline {
         font-size: 1.3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .project-subtext {
+        font-size: 0.85rem;
     }
 
     .sidebyside-left .project-gallery {
@@ -1778,9 +1799,18 @@ cite {
         margin-bottom: 2.5rem;
     }
 
+    .project-header {
+        margin-bottom: 1rem;
+    }
+
     .project-headline {
         font-size: 1.1rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .project-subtext {
+        font-size: 0.82rem;
+        line-height: 1.4;
     }
 
     .sidebyside-left .project-gallery {
